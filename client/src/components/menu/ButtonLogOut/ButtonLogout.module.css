@@ -1,0 +1,40 @@
+.button {
+  display: block;
+  width: 100%;
+  height: 7%;
+  padding-left: 7%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.button__link {
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 4.5%;
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.button__link:hover {
+  color: var(--color-primary);
+}
+
+.button__icon {
+  display: inline-flex;
+  color: var(--color-primary);
+}
+
+@media (min-width: 1600px) {
+  .button__link {
+    font-size: calc(var(--step--1) * 0.96);
+    padding-left: 6.5%;
+  }
+
+  .button__icon {
+    width: 30px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=ButtonLogout.module.css.map */

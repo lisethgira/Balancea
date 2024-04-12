@@ -1,0 +1,50 @@
+.cell {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.cell > span {
+  padding: 0.15rem 0.4rem 0.15rem 0.4rem;
+  border: 2px solid peru;
+  border-radius: 0.4rem;
+  font-family: var(--font-text-primary);
+  font-size: calc(var(--step--3) * 0.8);
+}
+
+.center {
+  text-align: center;
+}
+
+.icon {
+  width: 2.5vw;
+  height: 5vh;
+  border-radius: 0.45rem;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__view {
+  color: var(--color-text-secondary);
+  padding-right: 0.65rem;
+}
+.button__view:hover {
+  color: #bed5f7;
+}
+
+.button__delete {
+  all: unset;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  background-color: transparent;
+}
+.button__delete:hover {
+  color: #ffc4cf;
+}/*# sourceMappingURL=TransactionRow.module.css.map */

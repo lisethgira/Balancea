@@ -1,0 +1,258 @@
+.stadistics{
+    width:57vw;
+    height: 18vh;
+    min-height: 180px;
+    min-width: 700px;
+    color:var(--color-text-primary);
+    // background-color: blue;
+
+
+    font-family: var(--font-text-secondary);
+}
+
+.stadistics__title{
+    margin-bottom: 0.75rem;
+    font-size: calc(var(--step--1)*0.95);
+}
+
+.stadistics__label{
+    width:101.5%;
+    //FLex
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.stadistics__container{
+    width:100%;
+    // background-color: aquamarine;
+    min-width: 735px;
+    text-align: center;
+
+    //Grid
+    display: grid;
+    grid-template-columns:22% 36.5% 36.5%;
+    column-gap: 2.5%;
+}
+
+// .stadistics__card{
+//     width: 100%;
+//     padding: 1rem;
+//     border-radius: 1.15rem;
+//     background-color: var(--color-component);
+// }
+
+.stadistics__card{
+    width: 105%;
+    padding: 1rem;
+    border-radius: 1.15rem;
+    background-color: var(--color-component);
+    //Shadow
+    box-shadow: 4px 8px 20px -8px var(--color-component-shadow);
+
+    //Flex
+    display: flex;
+    justify-content: space-around;
+
+    //Transaition
+    transition: all .2s ease-in-out;
+
+    &:hover{
+      // background-color: antiquewhite;
+      transform: scale(0.95); 
+    }
+}
+
+.categories__icon{
+  padding-right: 2rem;
+}
+// .stadistics__container .stadistics__card:nth-child(1){
+//   display: flex;
+//   // flex-direction: column;
+//   justify-content: space-around;
+// }
+
+// .stadistics__container .stadistics__card:nth-child(2), .stadistics__container .stadistics__card:nth-child(3){
+//   //Flex
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.stadistics__description{
+  // background-color: pink;
+
+  //Flex
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stadistics__description >h4{
+  display: block;
+  color:var(--color-text-primary);
+  font-size: calc(var(--step-1)*0.80);
+  font-weight:500;
+  
+}
+.stadistics__description >p{
+  font-size: calc(var(--step-3)*0.92);;
+  font-weight: 700;
+}
+
+
+
+/*Percentage circles*/
+@property --percentage{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+  
+  .pie {
+    --percentage:20;
+    --border:0.75rem;
+    // --border-corner:0.7rem;
+    //OJO
+    --color:hsl(173, 100%, 32%);
+    --view:100px;
+    --color-corner-start:hsl(173, 100%, 32%);
+    --color-corner-end:hsl(173, 79%, 76%);
+    // background-color: aqua;
+  
+    width: var(--view);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+
+  }
+  .pie:before,
+  .pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  .pie:before {
+    inset: 0;
+    background:
+      radial-gradient(farthest-side,var(--color-corner-start) 98%,#0000) top/var(--border) var(--border) no-repeat,
+      conic-gradient(var(--color), hsl(173, 79%, 76%) calc(var(--percentage)*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--border)),#000 calc(100% - var(--border)));
+            mask: radial-gradient(farthest-side,#0000 calc(99% - var(--border)),#000 calc(100% - var(--border)));
+  }
+  .pie:after {
+    inset: calc(50% - var(--border)/2);
+    background: var(--color-corner-end);
+    transform: rotate(calc(var(--percentage)*3.6deg)) translateY(calc(50% - var(--view)/2));
+  }
+  .animate {
+    animation: p 1s .5s both;
+  }
+  .no-round:before {
+    background-size: 0 0, auto;
+  }
+  .no-round:after {
+    content: none;
+  }
+  @keyframes p{
+    from{--percentage:0}
+  }
+
+
+
+  //
+// * {
+//   outline: 0;
+//   font-family: sans-serif
+// }
+// // body {
+// //   background-color: #fafafa
+// // }
+// span.msg,
+// span.choose {
+//   color: #555;
+//   padding: 5px 0 10px;
+//   display: inherit
+// }
+// .container {
+//   width: 500px;
+//   margin: 50px auto 0;
+//   text-align: center
+// }
+
+// /*Styling Selectbox*/
+// .dropdown {
+//   width: 300px;
+//   display: inline-block;
+//   background-color: #fff;
+//   border-radius: 2px;
+//   box-shadow: 0 0 2px rgb(204, 204, 204);
+//   transition: all .5s ease;
+//   position: relative;
+//   font-size: 14px;
+//   color: #474747;
+//   height: 100%;
+//   text-align: left
+// }
+// .dropdown .select {
+//     cursor: pointer;
+//     display: block;
+//     padding: 10px
+// }
+// .dropdown .select > i {
+//     font-size: 13px;
+//     color: #888;
+//     cursor: pointer;
+//     transition: all .3s ease-in-out;
+//     float: right;
+//     line-height: 20px
+// }
+// .dropdown:hover {
+//     box-shadow: 0 0 4px rgb(204, 204, 204)
+// }
+// .dropdown:active {
+//     background-color: #f8f8f8
+// }
+// .dropdown.active:hover,
+// .dropdown.active {
+//     box-shadow: 0 0 4px rgb(204, 204, 204);
+//     border-radius: 2px 2px 0 0;
+//     background-color: #f8f8f8
+// }
+// .dropdown.active .select > i {
+//     transform: rotate(-90deg)
+// }
+// .dropdown .dropdownMenu {
+//     position: absolute;
+//     background-color: #fff;
+//     width: 100%;
+//     left: 0;
+//     margin-top: 1px;
+//     box-shadow: 0 1px 2px rgb(204, 204, 204);
+//     border-radius: 0 1px 2px 2px;
+//     overflow: hidden;
+//     display: none;
+//     max-height: 144px;
+//     overflow-y: auto;
+//     z-index: 9
+// }
+// .dropdown .dropdownMenu li {
+//     padding: 10px;
+//     transition: all .2s ease-in-out;
+//     cursor: pointer
+// } 
+// .dropdown .dropdownMenu {
+//     padding: 0;
+//     list-style: none
+// }
+// .dropdown .dropdownMenu li:hover {
+//     background-color: #f2f2f2
+// }
+// .dropdown .dropdownMenu li:active {
+//     background-color: #e2e2e2
+// }

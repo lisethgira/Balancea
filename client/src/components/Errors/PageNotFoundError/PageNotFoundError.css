@@ -1,0 +1,40 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button {
+    cursor: pointer;
+    background-color: hsl(173deg, 100%, 42%);
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem; /* Adaptable a la configuración del navegador */
+    font-weight: 600;
+    color: hsl(0deg, 0%, 100%);
+    padding: 10px 20px; /* Mejor para responsividad que width/height fijos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Suaviza las transiciones */
+}
+
+.button:hover {
+    background-color: hsla(173deg, 79%, 67%, 0.838);
+    transform: scale(1.05);
+}
+
+/* Media queries para adaptar el botón a dispositivos más pequeños */
+@media (max-width: 768px) {
+    .button {
+        font-size: 0.9rem; /* Más pequeño en dispositivos móviles */
+        padding: 8px 16px; /* Ajustar padding para mantener la proporcionalidad */
+    }
+}
